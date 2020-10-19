@@ -1,78 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Rubik&display=swap");
+
 $white: #eaebed;
 $charcoal: #696d7d;
 $pink: #f87666;
 $yellow: #ffb400;
 
-.main {
+.recipe-page {
   width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: $white;
   overflow-x: hidden;
 }
 
-.input {
+.display {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  justify-self: center;
-  align-self: start;
-  width: 175px;
-  height: 175px;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+  font-size: 2em;
+  font-family: "Rubik", sans-serif;
   border-radius: 50%;
-  box-shadow: 28px 35px 30px 5px rgba(105, 109, 125, 0.16),
-    -23px -23px 50px rgb(248, 248, 248);
+  margin: 10% 5%;
+  box-shadow: 6px 10px 5px 2px rgba(105, 109, 125, 0.16),
+    -5px -5px 5px rgb(248, 248, 248);
 }
 
-#weight-in {
-  grid-column: 1;
-  grid-row: 2;
+.display-value {
+  background-color: $charcoal;
+  opacity: 0.9;
+  color: transparent;
+  text-shadow: 0px 2px 2px rgba(255,255,255,0.4);
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text;
 }
-
-#grind {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-#timer {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-#weight-out {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-#ratio {
-  grid-column: 2;
-  grid-row: 3;
-}
-
 
 .slider-container {
-  width: 25vw;
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: center;
-  align-self: end;
-  margin: 10px;
+  width: 50vw;
+  margin-bottom: 10%;
 }
 
 .slider {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 15px;
+  height: 5px;
   border-radius: 5px;
   background-color: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s ease-in-out;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s ease-in-out;
+  // transform: rotate(90deg);
 }
 
 .slider:hover {
@@ -82,18 +67,36 @@ $yellow: #ffb400;
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: $pink;
+  background: $yellow;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-  appearannce: none;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: $pink;
+  background: $yellow;
+  border: none;
   cursor: pointer;
+  outline: none;
+}
+
+.button {
+  padding: 0.6em 20vw;
+  text-align: center;
+  background-color: $charcoal;
+  opacity: 0.9;
+  color: transparent;
+  text-shadow: 0px 2px 2px rgba(255,255,255,0.4);
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
 }
