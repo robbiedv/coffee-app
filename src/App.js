@@ -1,12 +1,12 @@
 import React from "react";
 import "./css/App.scss";
-import Recipe from "./components/recipe";
+import Espresso from "./components/espresso";
 
 function Main() {
   return (
     <div className="main">
       <header className="header"></header>
-      <Recipe />
+      <Espresso />
     </div>
   );
 }
